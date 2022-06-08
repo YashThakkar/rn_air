@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 const iconColor = 'white';
-const iconColor_2 = 'grey';
+const iconColor_2 = 'red';
 const duration_1 = 300;
 const duration_2 = 650;
 
@@ -99,9 +99,7 @@ export const LockScreen = () => {
 
   return (
     <ImageBackground
-      source={{
-        uri: 'https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg',
-      }}
+      source={require('./images/image_1.jpeg')}
       resizeMode={'stretch'}
       style={Styles.screen}>
       <View style={Styles.section_1}>
@@ -109,6 +107,7 @@ export const LockScreen = () => {
           <Text style={Styles.text_1}>
             We're picking up <Text style={Styles.nums}>{items}</Text> items
           </Text>
+          <Text style={Styles.text_3}>Terminal-1</Text>
         </View>
       </View>
       <View style={Styles.section_2}>
@@ -184,7 +183,7 @@ const Styles = StyleSheet.create({
   },
   container_1: {
     width: '70%',
-    height: '50%',
+    height: '55%',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#191970',
@@ -195,6 +194,18 @@ const Styles = StyleSheet.create({
     padding: 10,
     fontSize: 16,
     backgroundColor: '#6495ED',
+    borderRadius: 20,
+  },
+  text_3: {
+    color: 'red',
+    padding: 7,
+    paddingHorizontal: 15,
+    position: 'absolute',
+    alignSelf: 'flex-start',
+    fontSize: 16,
+    top: -20,
+    left: -20,
+    backgroundColor: 'white',
     borderRadius: 20,
   },
   text_2: {
